@@ -1,1 +1,0 @@
-packages/material-svelte/README.md
