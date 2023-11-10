@@ -1,0 +1,5 @@
+{
+    "dep": "prod,dev,bundle,optional,peer,resolutions",
+    "upgrade": true,
+    "interactive": true
+}

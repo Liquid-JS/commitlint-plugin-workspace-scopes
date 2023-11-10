@@ -1,30 +1,40 @@
 {
-  "name": "commitlint-plugin-workspace-scopes",
-  "version": "1.1.0",
-  "description": "A commitlint rule to discover workspace packages as scopes.",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/material-svelte/material-svelte",
-    "directory": "tools/commitlint-plugin-workspace-scopes"
-  },
-  "author": "",
-  "homepage": "https://github.com/material-svelte/material-svelte/tree/main/tools/commitlint-plugin-workspace-scopes#readme",
-  "main": "index.js",
-  "keywords": [
-    "commitlint",
-    "commitlintplugin",
-    "pnpm",
-    "yarn",
-    "npm",
-    "bolt",
-    "monorepo",
-    "workspace",
-    "workspaces"
-  ],
-  "dependencies": {
-    "@commitlint/ensure": "^12.1.1",
-    "@commitlint/message": "^12.1.1",
-    "@manypkg/get-packages": "^1.1.1"
-  }
+    "name": "@liquid-js/commitlint-plugin-workspace-scopes",
+    "version": "1.2.0",
+    "description": "A commitlint rule to discover workspace packages as scopes.",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Liquid-JS/commitlint-plugin-workspace-scopes"
+    },
+    "scripts": {
+        "release": "git diff --exit-code && standard-version && git push --follow-tags origin"
+    },
+    "files": [
+        "index.js",
+        "README.md"
+    ],
+    "author": "",
+    "homepage": "https://github.com/Liquid-JS/commitlint-plugin-workspace-scopes#readme",
+    "main": "index.js",
+    "keywords": [
+        "commitlint",
+        "commitlintplugin",
+        "pnpm",
+        "yarn",
+        "npm",
+        "bolt",
+        "monorepo",
+        "workspace",
+        "workspaces"
+    ],
+    "dependencies": {
+        "@commitlint/ensure": "^18.4.0",
+        "@commitlint/message": "^18.4.0",
+        "@manypkg/get-packages": "^2.2.0"
+    },
+    "devDependencies": {
+        "standard-version": "^9.5.0",
+        "npm-check-updates": "^16.14.6"
+    }
 }
