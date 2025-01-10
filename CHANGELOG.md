@@ -1,6 +1,13 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [2.1.0](https://github.com/Liquid-JS/commitlint-plugin-workspace-scopes/compare/v2.0.0...v2.1.0) (2025-01-10)
+
+
+### Features
+
+* typescript ([64a75e0](https://github.com/Liquid-JS/commitlint-plugin-workspace-scopes/commit/64a75e0e28da242ed3d857d6c35a939d8cc2e8d8))
 
 ## 2.0.0 (2023-11-10)
 
