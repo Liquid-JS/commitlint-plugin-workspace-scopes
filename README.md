@@ -1,72 +1,100 @@
-# @liquid-js/commitlint-plugin-workspace-scopes"
+# commitlint-plugin-workspace-scopes
+
+[![GitHub license](https://img.shields.io/github/license/Liquid-JS/commitlint-plugin-workspace-scopes.svg)](https://github.com/Liquid-JS/commitlint-plugin-workspace-scopes/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/dm/@liquid-js/commitlint-plugin-workspace-scopes.svg)](https://www.npmjs.com/package/@liquid-js/commitlint-plugin-workspace-scopes)
+[![scope](https://img.shields.io/npm/v/@liquid-js/commitlint-plugin-workspace-scopes.svg)](https://www.npmjs.com/package/@liquid-js/commitlint-plugin-workspace-scopes)
 
 A `commitlint` plugin to discover workspace packages as scopes.
 
 ## Installation
 
-**pnpm**
+    npm install @liquid-js/commitlint-plugin-workspace-scopes
 
-```sh
-pnpm install --dev @liquid-js/commitlint-plugin-workspace-scopes"
-```
+## API Documentation
 
-**yarn**
-
-```sh
-yarn add --dev @liquid-js/commitlint-plugin-workspace-scopes"
-```
-
-**npm**
-
-```sh
-npm install --save-dev @liquid-js/commitlint-plugin-workspace-scopes"
-```
+<https://liquid-js.github.io/commitlint-plugin-workspace-scopes/>
 
 ## Usage
 
 To configure that only workspace-packages are accepted scopes:
 
-```js
-module.exports = {
-  plugins: ['@liquid-js/commitlint-plugin-workspace-scopes'],
-  rules: {
-    'scope-enum': [2, 'always', {}],
-  },
-};
+```json
+{
+    "plugins": [
+        "@liquid-js/commitlint-plugin-workspace-scopes"
+    ],
+    "rules": {
+        "scope-enum": [
+            2,
+            "always",
+            {}
+        ]
+    }
+}
 ```
 
 To configure that workspace-packages and `codeowners` are accepted scopes:
 
-```js
-module.exports = {
-  plugins: ['@liquid-js/commitlint-plugin-workspace-scopes'],
-  rules: {
-    'scope-enum': [2, 'always', { extra: ['codeowners'] }],
-  },
-};
+```json
+{
+    "plugins": [
+        "@liquid-js/commitlint-plugin-workspace-scopes"
+    ],
+    "rules": {
+        "scope-enum": [
+            2,
+            "always",
+            {
+                "extra": [
+                    "codeowners"
+                ]
+            }
+        ]
+    }
+}
 ```
 
 To strip namespace prefix from workspace packages:
 
-```js
-module.exports = {
-  plugins: ['@liquid-js/commitlint-plugin-workspace-scopes'],
-  rules: {
-    'scope-enum': [2, 'always', { stripPrefix: ['@my-org/'] }],
-  },
-};
+```json
+{
+    "plugins": [
+        "@liquid-js/commitlint-plugin-workspace-scopes"
+    ],
+    "rules": {
+        "scope-enum": [
+            2,
+            "always",
+            {
+                "stripPrefix": [
+                    "@my-org/"
+                ]
+            }
+        ]
+    }
+}
 ```
 
 ## Examples
 
-    $ cat commitlint.config.js
+    $ cat .commitlintrc.json
 
-    module.exports = {
-      extends: ['@commitlint/config-conventional'],
-      plugins: ['@liquid-js/commitlint-plugin-workspace-scopes'],
-      rules: {
-        'scope-enum': [2, 'always', ['codeowners']]
-      }
+    {
+        "extends": [
+            "@commitlint/config-conventional"
+        ],
+        "plugins": [
+            "@liquid-js/commitlint-plugin-workspace-scopes"
+        ],
+        "rules": {
+            "scope-enum": [
+                2,
+                "always",
+                [
+                    "codeowners"
+                ]
+            ]
+        }
     }
 
     $ tree packages
@@ -88,3 +116,7 @@ module.exports = {
     ⧗   input: feat(foo): this will fail
     ✖   scope must be one of [api, app, web] [scope-enum]
     ✖   found 1 problems, 0 warnings
+
+## License
+
+[MIT License](https://github.com/Liquid-JS/commitlint-plugin-workspace-scopes/blob/master/LICENSE)

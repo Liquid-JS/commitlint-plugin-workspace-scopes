@@ -5,7 +5,7 @@
     "editor.formatOnSave": true,
     "editor.wordWrap": "on",
     "editor.codeActionsOnSave": {
-        "source.fixAll": true
+        "source.fixAll": "explicit"
     },
     "files.autoSave": "off",
     "html.format.wrapAttributes": "force",
@@ -25,9 +25,6 @@
     },
     "[toml]": {
         "editor.tabSize": 2
-    },
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
     },
     "stylelint.validate": [
         "css",

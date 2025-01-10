@@ -2,21 +2,60 @@
     "name": "@liquid-js/commitlint-plugin-workspace-scopes",
     "version": "2.0.0",
     "description": "A commitlint rule to discover workspace packages as scopes.",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Liquid-JS/commitlint-plugin-workspace-scopes"
-    },
-    "scripts": {
-        "release": "git diff --exit-code && standard-version && git push --follow-tags origin"
+    "type": "module",
+    "main": "./lib/index.js",
+    "types": "./lib/index.d.ts",
+    "exports": {
+        "./package.json": {
+            "default": "./package.json"
+        },
+        ".": {
+            "node": "./lib/index.js",
+            "types": "./lib/index.d.ts",
+            "default": "./lib/index.js"
+        }
     },
     "files": [
-        "index.js",
-        "README.md"
+        "lib"
     ],
-    "author": "",
-    "homepage": "https://github.com/Liquid-JS/commitlint-plugin-workspace-scopes#readme",
-    "main": "index.js",
+    "dependencies": {
+        "@commitlint/ensure": "^19.5.0",
+        "@commitlint/message": "^19.5.0",
+        "@manypkg/get-packages": "^2.2.2"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^19.6.1",
+        "@commitlint/config-conventional": "^19.6.0",
+        "@stylistic/eslint-plugin": "^2.12.1",
+        "@types/node": "<23.0.0",
+        "clean-package": "^2.2.0",
+        "commit-and-tag-version": "^12.5.0",
+        "eslint": "^9.17.0",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-jsdoc": "^50.6.1",
+        "eslint-plugin-prefer-arrow-functions": "^3.6.0",
+        "eslint-plugin-unused-imports": "^4.1.4",
+        "husky": "^9.1.7",
+        "npm-check-updates": "^17.1.13",
+        "rimraf": "^6.0.1",
+        "typedoc": "^0.27.6",
+        "typescript": "^5.7.3",
+        "typescript-eslint": "^8.19.1"
+    },
+    "scripts": {
+        "build": "rimraf lib && tsc -p tsconfig.lib.json",
+        "lint": "eslint . --fix",
+        "prepublishOnly": "npm run build",
+        "prepare": "husky",
+        "release": "git diff --exit-code && commit-and-tag-version && git push --follow-tags origin",
+        "docs": "typedoc",
+        "prepack": "clean-package",
+        "postpack": "clean-package restore"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-JS/commitlint-plugin-workspace-scopes.git"
+    },
     "keywords": [
         "commitlint",
         "commitlintplugin",
@@ -28,13 +67,19 @@
         "workspace",
         "workspaces"
     ],
-    "dependencies": {
-        "@commitlint/ensure": "^18.4.0",
-        "@commitlint/message": "^18.4.0",
-        "@manypkg/get-packages": "^2.2.0"
+    "author": "HitkoDev <development@hitko.si>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Liquid-JS/commitlint-plugin-workspace-scopes/issues"
     },
-    "devDependencies": {
-        "standard-version": "^9.5.0",
-        "npm-check-updates": "^16.14.6"
+    "homepage": "https://liquid-js.github.io/commitlint-plugin-workspace-scopes/",
+    "packageManager": "yarn@4.6.0",
+    "clean-package": {
+        "remove": [
+            "packageManager",
+            "scripts",
+            "devDependencies",
+            "clean-package"
+        ]
     }
 }
