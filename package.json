@@ -19,28 +19,28 @@
         "lib"
     ],
     "dependencies": {
-        "@commitlint/ensure": "^19.5.0",
-        "@commitlint/message": "^19.5.0",
-        "@manypkg/get-packages": "^2.2.2"
+        "@commitlint/ensure": "^20.3.1",
+        "@commitlint/message": "^20.0.0",
+        "@manypkg/get-packages": "^3.1.0"
     },
     "devDependencies": {
-        "@commitlint/cli": "^19.6.1",
-        "@commitlint/config-conventional": "^19.6.0",
-        "@stylistic/eslint-plugin": "^2.12.1",
+        "@commitlint/cli": "^20.3.1",
+        "@commitlint/config-conventional": "^20.3.1",
+        "@stylistic/eslint-plugin": "^5.7.0",
         "@types/node": "<23.0.0",
         "clean-package": "^2.2.0",
-        "commit-and-tag-version": "^12.5.0",
-        "eslint": "^9.17.0",
-        "eslint-plugin-import": "^2.31.0",
-        "eslint-plugin-jsdoc": "^50.6.1",
-        "eslint-plugin-prefer-arrow-functions": "^3.6.0",
-        "eslint-plugin-unused-imports": "^4.1.4",
+        "commit-and-tag-version": "^12.6.1",
+        "eslint": "^9.39.2",
+        "eslint-plugin-import": "^2.32.0",
+        "eslint-plugin-jsdoc": "^62.2.0",
+        "eslint-plugin-prefer-arrow-functions": "^3.9.1",
+        "eslint-plugin-unused-imports": "^4.3.0",
         "husky": "^9.1.7",
-        "npm-check-updates": "^17.1.13",
-        "rimraf": "^6.0.1",
-        "typedoc": "^0.27.6",
-        "typescript": "^5.7.3",
-        "typescript-eslint": "^8.19.1"
+        "npm-check-updates": "^19.3.1",
+        "rimraf": "^6.1.2",
+        "typedoc": "^0.28.16",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.53.1"
     },
     "scripts": {
         "build": "rimraf lib && tsc -p tsconfig.lib.json",
@@ -73,7 +73,7 @@
         "url": "https://github.com/Liquid-JS/commitlint-plugin-workspace-scopes/issues"
     },
     "homepage": "https://liquid-js.github.io/commitlint-plugin-workspace-scopes/",
-    "packageManager": "yarn@4.6.0",
+    "packageManager": "yarn@4.12.0",
     "clean-package": {
         "remove": [
             "packageManager",
